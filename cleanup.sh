@@ -6,6 +6,7 @@ shopt -s nocaseglob
 
 export TZ=Asia/Seoul
 #TARGET_DIR="/home/ec2-user/alog/alog-bori/ga"
+
 TARGET_DIR="${1:-/home/ec2-user/alog/alog-bori/ga}"
 RETENTION_DAYS=3         # 오늘 기준 3일 이상 지난 파일 삭제
 DRY_RUN=0                # 1=미삭제 테스트, 0=실삭제
