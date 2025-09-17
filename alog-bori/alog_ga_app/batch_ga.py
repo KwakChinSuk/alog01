@@ -52,6 +52,12 @@ def fn_ga_todb_exec(pymd) :
     strSQL ="update alog_bori.tga_target set depth2 ='' where depth1 ='search' and depth2 ='menu' and ymd = '" +pymd+ "' "
     cfg.fnSQLexe (strSQL)
 
+    strSQL = "insert into tga_url (url) vaules('http://127.0.0.1:" +cfg.webport +"/?pdevice=a&pday=" +pymd+"')"
+    cfg.fnSQLexe (strSQL)
+
+    strSQL = "insert into tga_url (url) vaules('http://127.0.0.1:" +cfg.webport +"/?pdevice=&pday=" +pymd+"')"
+    cfg.fnSQLexe (strSQL)
+
     cfg.fnprt ("fn_ga_todb_exec END " + pymd)
 
 
