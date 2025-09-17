@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load humanize %}
+{% load mathfilters %}
+<head>
+  <title>alog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="author" content="CodedThemes">
+
+<link rel="icon" href="static/assets/images/favicon.svg" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" id="main-font-link">
+
+<link rel="stylesheet" href="static/assets/fonts/tabler-icons.min.css" >
+<link rel="stylesheet" href="static/assets/fonts/feather.css" >
+<link rel="stylesheet" href="static/assets/fonts/fontawesome.css" >
+<link rel="stylesheet" href="static/assets/fonts/material.css" >
+<link rel="stylesheet" href="static/assets/css/style.css" id="main-style-link" >
+<link rel="stylesheet" href="static/assets/css/style-preset.css" >
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="static/home.js"></script>
+</head>
+<style>
+ .select-reset {border: none; outline: none;background: #f0f0f0 no-repeat right center;}
+ .parent {font-size: 14px; position: relative; display: inline-block; cursor: pointer; color: black;}
+ .parent:hover .tooltip {display: block;opacity: 1;}
+ .parent:hover .parent-title {display: block;opacity: 1;}
+ .parent:hover .parent-read {display: block;opacity: 1;}
+ .parent:hover .parent-black {display: block;opacity: 1;}
+ .parent:hover .parent-left {display: block;opacity: 1;} 
+ .parent:hover .parent-right {display: block;opacity: 1;}  
+ .tooltip {display: none;position: absolute;top: 100%; left: 50%;transform: translateX(-50%);margin-top: 8px;background: #333;color: #fff;padding: 6px 10px;border-radius: 4px;white-space: nowrap;z-index: 10;opacity: 0;transition: opacity 0.3s;}
+ .parent-title {display: none;position: absolute;top: 100%; left: 50%;transform: translateX(-50%);margin-top: 8px;background: #a8c7ea;color: #000000;padding: 3px 10px;border-radius: 4px;white-space: nowrap;z-index: 10;opacity: 0;transition: opacity 0.3s;}
+ .parent-read  {display: none;position: absolute;top: 100%; left: 50%;transform: translateX(-50%);margin-top: 8px;background: #f79494;color: #000000;padding: 3px 10px;border-radius: 4px;white-space: nowrap;z-index: 10;opacity: 0;transition: opacity 0.3s;}
+ .parent-black {display: none;position: absolute;top: 100%; left: 50%;transform: translateX(-50%);margin-top: 8px;background: #c2c2c2;color: #000000;padding: 3px 10px;border-radius: 4px;white-space: nowrap;z-index: 10;opacity: 0;transition: opacity 0.3s;}
+ .parent-left {display: none;position: absolute;top: 100%; left: -100%;transform: translateX(-50%);margin-top: 8px;background: #a8c7ea;color: #000000;padding: 3px 10px;border-radius: 4px;white-space: nowrap;z-index: 10;opacity: 0;transition: opacity 0.3s;} 
+ .parent-right {text-align: left;display: none;position: absolute;top: 100%; left: 100px;transform: translateX(-50%);margin-top: 8px;background: #a8c7ea;color: #000000;padding: 3px 10px;border-radius: 4px;white-space: nowrap;z-index: 10;opacity: 0;transition: opacity 0.3s;}  
+
+
+ img.hierarchy {
+    filter: invert(27%) sepia(89%) saturate(6342%) hue-rotate(357deg) brightness(98%) contrast(101%);
+  }
+</style>
+<script>
+function zeroToNull(arr) {
+    return arr.map(function(v) { return v === 0 ? null : v; });
+  }
+
+;
+
+</script>
+
+<div class="loader-bg">
+  <div class="loader-track">
+    <div class="loader-fill"></div>
+  </div>
+</div>
+
+<div style="margin: 10px;">
+    <div class="pc-content">
+        <div class="page-header-title">
+            <table>
+                <Tr>
+                    <td rowspan="3" width="350"><font size="5">
+                        <select class="select-reset" onchange='changepath(this.value);' >
+                            <option value="a" {% if  UrlPara.device == 'a' %} selected  {% endif %} >Mobile</option>
+                            <option value="p" {% if  UrlPara.device == 'p' %} selected  {% endif %} >Desktop (WWW)</option>                            
+                        </select> </font> </td>
+                    <Td> </td>
+                    <Td></td>
+                    <Td></td>
+                    <Td></td>
+                    <Td></td>
+                    <Td></td>
+                    <Td></td>
+                </Tr>
+                <Tr>
+                    <Td></td>
+                    <Td align ='bottom'> <input type="date" id="date" name="date"  value="{{ UrlPara.ymd }}"> <font size="2">&nbsp;&nbsp; </Td>
+                    <Td>&nbsp;&nbsp;&nbsp;</td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #d4d4d4;background-color: #FFFFFF;'>상승지표</button></td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #d4d4d4;background-color: #d4d4d4;'>상승지표(2주연속)</button></td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #ffb3a7;background-color: #FFFFFF;'>하락지표</button></td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #ffb3a7;background-color: #ffb3a7;'>하락지표(2주연속)</button></td>
+                    <td>
+                        <div class='parent'>
+                            <span class='badge bg-light-danger'><i class='ti ti-trending-down'></i>전일</span><Br>
+                            <span class='badge bg-light-dark'><i class='ti ti-trending-up'></i>전주</span><Br>
+                            <span class='badge bg-light-danger'><i class='ti ti-trending-down'></i>2주전</span>
+                        </div>
+                    <td>
+                    <!--
+                    <Td><button  class='nav-link '  style=' padding: 1px 3px; border: 2px solid #f79494;'>전일 대비 하락 지표</button></Td>
+                    <td><button  class='nav-link '  style=' padding: 1px 3px; border: 2px solid #8c8c8c;'>전일전주 상승한 지표</button></td>
+                    <td><button  class='nav-link '  style=' padding: 1px 3px; border: 2px solid #000000;'>전일전주2주전 모두 상승한 지표</button></td>
+                    
+                    <td><button style=' padding: 1px 3px; border: 2px solid #e5e5e5;'><img width=20 src='static/bbl.png' width='16'>유입채널</button></td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #e5e5e5;'><img width=20 src='static/bbln.png' width='16'></button></td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #e5e5e5;'><img width=20 src='static/bblp.png' width='16'>이후 페이지</button></td>
+                    <td><button style=' padding: 1px 3px; border: 2px solid #e5e5e5;'><img src='static/hir.svg' class='hierarchy' width='16'> 방문경로</button></td>
+                    -->
+
+                    <td></td>
+
+
+                </Tr>
+            </table>
+        </div>
+
+        <div class="row">
+            {{ pcharthtml01|safe }}
+            {{ pcharthtml02|safe }}            
+            {{ pcharthtml03|safe }}
+            {{ pcharthtml04|safe }}            
+            {{ pcharthtml06|safe }}
+            {{ pcharthtml07|safe }}
+            {{ pcharthtml08|safe }}            
+        </div>
+    </div>
+</div>
+
+
+  <script src="static/assets/js/plugins/popper.min.js"></script>
+  <script src="static/assets/js/plugins/simplebar.min.js"></script>
+  <script src="static/assets/js/plugins/bootstrap.min.js"></script>
+  <script src="static/assets/js/fonts/custom-font.js"></script>
+  <script src="static/assets/js/pcoded.js"></script>
+  <script src="static/assets/js/plugins/feather.min.js"></script>
+
+  <script>
+
+    layout_change('light');
+
+
+    function changepath(selvalue) {
+        if ( selvalue ==""){
+            return ""
+        }
+        window.location.href = "?pdevice=" +selvalue+"&pday={{ UrlPara.ymd }}";
+    }
+
+    const dateInput = document.getElementById("date");
+
+    dateInput.addEventListener("change", function() {
+      const selectedDate = this.value; // YYYY-MM-DD 형식
+      if (selectedDate) {
+        // 현재 페이지 주소에 ?date=YYYY-MM-DD 추가
+        window.location.href = window.location.pathname + "?pdevice={{ UrlPara.device }}&pday=" + selectedDate;
+      }
+    });
+  
+
+  </script>
+  <script>layout_rtl_change('false');</script>
+  <script>preset_change("preset-1");</script>
+  <script>font_change("Public-Sans");</script>
+
+
+</body>
+</html>

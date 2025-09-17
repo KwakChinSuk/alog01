@@ -1,0 +1,11 @@
+[DEL ] /home/ec2-user/alog/alog-bori/ga/activeUsers/2025-09-14_349789872_activeUsers_0.csv (기준일 2025-09-14, 3일 경과)
+[KEEP] /home/ec2-user/alog/alog-bori/ga/activeUsers/2025-09-15_349789872_activeUsers_0.csv (기준일 2025-09-15, 2일 경과 < 3)
+[DEL ] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-14_349789872_pageview_mobile_0.csv (기준일 2025-09-14, 3일 경과)
+[DEL ] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-14_349789872_pageview_mobile_100000.csv (기준일 2025-09-14, 3일 경과)
+[DEL ] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-14_349789872_pageview_desktop_0.csv (기준일 2025-09-14, 3일 경과)
+[DEL ] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-14_349789872_pageview_tablet_0.csv (기준일 2025-09-14, 3일 경과)
+[KEEP] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-15_349789872_pageview_mobile_0.csv (기준일 2025-09-15, 2일 경과 < 3)
+[KEEP] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-15_349789872_pageview_mobile_100000.csv (기준일 2025-09-15, 2일 경과 < 3)
+[KEEP] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-15_349789872_pageview_desktop_0.csv (기준일 2025-09-15, 2일 경과 < 3)
+[KEEP] /home/ec2-user/alog/alog-bori/ga/pageview/2025-09-15_349789872_pageview_tablet_0.csv (기준일 2025-09-15, 2일 경과 < 3)
+[DONE] 삭제:0 보존:0 오류:0

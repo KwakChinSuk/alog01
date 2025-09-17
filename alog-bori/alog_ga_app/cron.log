@@ -1,0 +1,29 @@
+2025-09-16
+2025-09-17 00:30:02 fn_ga_download_activeUsers_firstTimePurchasers Start 2025-09-16 0
+../ga/activeUsers/2025-09-16_349789872_activeUsers_0.csv
+2025-09-17 00:30:04 fn_ga_download_activeUsers_firstTimePurchasers Start 2025-09-16 100000
+2025-09-17 00:30:04 fn_ga_download_activeUsers_firstTimePurchasers END 2025-09-16 100000
+2025-09-17 00:30:04 START fn_ga_todb_activeUsers 2025-09-16
+../ga/activeUsers/2025-09-16_349789872_activeUsers_0.csv
+0
+2025-09-17 00:30:04 END fn_ga_todb_activeUsers 2025-09-16
+2025-09-17 00:30:04 fn_ga_download Start 2025-09-16 mobile 0
+2025-09-17 00:30:20 fn_ga_download Start 2025-09-16 mobile 100000
+2025-09-17 00:30:30 fn_ga_download Start 2025-09-16 mobile 200000
+2025-09-17 00:30:31 fn_ga_download END 2025-09-16 mobile 200000
+2025-09-17 00:30:31 fn_ga_download Start 2025-09-16 desktop 0
+2025-09-17 00:30:35 fn_ga_download Start 2025-09-16 desktop 100000
+2025-09-17 00:30:36 fn_ga_download END 2025-09-16 desktop 100000
+2025-09-17 00:30:36 fn_ga_download Start 2025-09-16 tablet 0
+2025-09-17 00:30:37 fn_ga_download Start 2025-09-16 tablet 100000
+2025-09-17 00:30:39 fn_ga_download END 2025-09-16 tablet 100000
+2025-09-17 00:30:39 START fn_ga_todb_pageview 2025-09-16
+../ga/pageview/2025-09-16_349789872_pageview_mobile_0.csv
+../ga/pageview/2025-09-16_349789872_pageview_mobile_100000.csv
+../ga/pageview/2025-09-16_349789872_pageview_desktop_0.csv
+../ga/pageview/2025-09-16_349789872_pageview_tablet_0.csv
+2025-09-17 00:37:44 END fn_ga_todb_pageview 2025-09-16
+2025-09-17 00:37:44 fn_ga_todb_exec START 2025-09-16
+2025-09-17 00:37:48 fn_ga_todb_exec END 2025-09-16
+2025-09-17
+END 2025-09-17
