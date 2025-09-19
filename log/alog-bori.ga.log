@@ -1,0 +1,59 @@
+2025-09-17
+2025-09-18 09:30:03 fn_ga_download_activeUsers_firstTimePurchasers Start 2025-09-17 0
+../ga/activeUsers/2025-09-17_349789872_activeUsers_0.csv
+2025-09-18 09:30:05 fn_ga_download_activeUsers_firstTimePurchasers Start 2025-09-17 100000
+2025-09-18 09:30:06 fn_ga_download_activeUsers_firstTimePurchasers END 2025-09-17 100000
+2025-09-18 09:30:06 START fn_ga_todb_activeUsers 2025-09-17
+../ga/activeUsers/2025-09-17_349789872_activeUsers_0.csv
+0
+2025-09-18 09:30:06 END fn_ga_todb_activeUsers 2025-09-17
+2025-09-18 09:30:06 fn_ga_download Start 2025-09-17 mobile 0
+2025-09-18 09:30:20 fn_ga_download Start 2025-09-17 mobile 100000
+2025-09-18 09:30:31 fn_ga_download Start 2025-09-17 mobile 200000
+2025-09-18 09:30:32 fn_ga_download END 2025-09-17 mobile 200000
+2025-09-18 09:30:33 fn_ga_download Start 2025-09-17 desktop 0
+2025-09-18 09:30:37 fn_ga_download Start 2025-09-17 desktop 100000
+2025-09-18 09:30:38 fn_ga_download END 2025-09-17 desktop 100000
+2025-09-18 09:30:38 fn_ga_download Start 2025-09-17 tablet 0
+2025-09-18 09:30:39 fn_ga_download Start 2025-09-17 tablet 100000
+2025-09-18 09:30:40 fn_ga_download END 2025-09-17 tablet 100000
+2025-09-18 09:30:40 START fn_ga_todb_pageview 2025-09-17
+../ga/pageview/2025-09-17_349789872_pageview_mobile_0.csv
+../ga/pageview/2025-09-17_349789872_pageview_mobile_100000.csv
+../ga/pageview/2025-09-17_349789872_pageview_desktop_0.csv
+../ga/pageview/2025-09-17_349789872_pageview_tablet_0.csv
+2025-09-18 09:31:39 END fn_ga_todb_pageview 2025-09-17
+2025-09-18 09:31:39 fn_ga_todb_exec START 2025-09-17
+syntax error at or near "vaules"
+LINE 1: insert into tga_url (url) vaules('http://127.0.0.1:8000/?pde...
+                                  ^
+
+ERROR SQL 2
+insert into tga_url (url) vaules('http://127.0.0.1:8000/?pdevice=a&pday=2025-09-17')
+2025-09-18
+2025-09-19 09:30:02 fn_ga_download_activeUsers_firstTimePurchasers Start 2025-09-18 0
+../ga/activeUsers/2025-09-18_349789872_activeUsers_0.csv
+2025-09-19 09:30:04 fn_ga_download_activeUsers_firstTimePurchasers Start 2025-09-18 100000
+2025-09-19 09:30:04 fn_ga_download_activeUsers_firstTimePurchasers END 2025-09-18 100000
+2025-09-19 09:30:04 START fn_ga_todb_activeUsers 2025-09-18
+../ga/activeUsers/2025-09-18_349789872_activeUsers_0.csv
+0
+2025-09-19 09:30:04 END fn_ga_todb_activeUsers 2025-09-18
+2025-09-19 09:30:05 fn_ga_download Start 2025-09-18 mobile 0
+2025-09-19 09:30:18 fn_ga_download Start 2025-09-18 mobile 100000
+2025-09-19 09:30:29 fn_ga_download Start 2025-09-18 mobile 200000
+2025-09-19 09:30:29 fn_ga_download END 2025-09-18 mobile 200000
+2025-09-19 09:30:30 fn_ga_download Start 2025-09-18 desktop 0
+2025-09-19 09:30:34 fn_ga_download Start 2025-09-18 desktop 100000
+2025-09-19 09:30:35 fn_ga_download END 2025-09-18 desktop 100000
+2025-09-19 09:30:35 fn_ga_download Start 2025-09-18 tablet 0
+2025-09-19 09:30:36 fn_ga_download Start 2025-09-18 tablet 100000
+2025-09-19 09:30:37 fn_ga_download END 2025-09-18 tablet 100000
+2025-09-19 09:30:37 START fn_ga_todb_pageview 2025-09-18
+../ga/pageview/2025-09-18_349789872_pageview_mobile_0.csv
+../ga/pageview/2025-09-18_349789872_pageview_mobile_100000.csv
+../ga/pageview/2025-09-18_349789872_pageview_desktop_0.csv
+../ga/pageview/2025-09-18_349789872_pageview_tablet_0.csv
+2025-09-19 09:31:36 END fn_ga_todb_pageview 2025-09-18
+2025-09-19 09:31:36 fn_ga_todb_exec START 2025-09-18
+2025-09-19 09:31:41 fn_ga_todb_exec END 2025-09-18

@@ -1,0 +1,77 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2025 - 08:43:55
+Django version 4.2.24, using settings 'alog_ga.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+[17/Sep/2025 08:44:07] "GET / HTTP/1.0" 200 148883
+[17/Sep/2025 08:44:07] "GET /static/assets/fonts/tabler-icons.min.css HTTP/1.0" 200 65599
+[17/Sep/2025 08:44:07] "GET /static/assets/fonts/material.css HTTP/1.0" 200 561
+[17/Sep/2025 08:44:07] "GET /static/assets/fonts/feather.css HTTP/1.0" 200 14882
+[17/Sep/2025 08:44:07] "GET /static/assets/fonts/fontawesome.css HTTP/1.0" 200 71978
+[17/Sep/2025 08:44:07] "GET /static/home.js HTTP/1.0" 200 2662
+[17/Sep/2025 08:44:07] "GET /static/assets/css/style-preset.css HTTP/1.0" 200 286199
+[17/Sep/2025 08:44:07] "GET /static/assets/js/plugins/popper.min.js HTTP/1.0" 200 20128
+[17/Sep/2025 08:44:07] "GET /static/assets/js/plugins/simplebar.min.js HTTP/1.0" 200 27067
+[17/Sep/2025 08:44:07] "GET /static/assets/css/style.css HTTP/1.0" 200 2073969
+[17/Sep/2025 08:44:07] "GET /static/assets/js/fonts/custom-font.js HTTP/1.0" 200 84427
+[17/Sep/2025 08:44:07] "GET /static/assets/js/plugins/bootstrap.min.js HTTP/1.0" 200 60583
+[17/Sep/2025 08:44:07] "GET /static/assets/js/pcoded.js HTTP/1.0" 200 23064
+[17/Sep/2025 08:44:07] "GET /static/assets/js/plugins/feather.min.js HTTP/1.0" 200 75977
+[17/Sep/2025 08:44:07] "GET /static/assets/fonts/phosphor/duotone/style.css HTTP/1.0" 304 0
+[17/Sep/2025 08:44:07] "GET /static/assets/fonts/tabler/tabler-icons.woff2 HTTP/1.0" 304 0
+[17/Sep/2025 08:44:08] "GET /static/assets/images/favicon.svg HTTP/1.0" 200 1514
+[17/Sep/2025 08:44:12] "GET / HTTP/1.0" 200 148883
+[17/Sep/2025 08:44:12] "GET /static/assets/fonts/feather.css HTTP/1.0" 200 14882
+[17/Sep/2025 08:44:12] "GET /static/assets/fonts/tabler-icons.min.css HTTP/1.0" 200 65599
+[17/Sep/2025 08:44:12] "GET /static/assets/fonts/material.css HTTP/1.0" 200 561
+[17/Sep/2025 08:44:12] "GET /static/assets/css/style-preset.css HTTP/1.0" 200 286199
+[17/Sep/2025 08:44:12] "GET /static/assets/fonts/fontawesome.css HTTP/1.0" 200 71978
+[17/Sep/2025 08:44:12] "GET /static/assets/css/style.css HTTP/1.0" 200 2073969
+[17/Sep/2025 08:44:12] "GET /static/home.js HTTP/1.0" 200 2662
+[17/Sep/2025 08:44:12] "GET /static/assets/js/plugins/simplebar.min.js HTTP/1.0" 200 27067
+[17/Sep/2025 08:44:12] "GET /static/assets/js/plugins/popper.min.js HTTP/1.0" 200 20128
+[17/Sep/2025 08:44:12] "GET /static/assets/js/plugins/bootstrap.min.js HTTP/1.0" 200 60583
+[17/Sep/2025 08:44:12] "GET /static/assets/js/pcoded.js HTTP/1.0" 200 23064
+[17/Sep/2025 08:44:12] "GET /static/assets/js/fonts/custom-font.js HTTP/1.0" 200 84427
+[17/Sep/2025 08:44:12] "GET /static/assets/js/plugins/feather.min.js HTTP/1.0" 200 75977
+[17/Sep/2025 08:44:12] "GET /static/assets/fonts/phosphor/duotone/style.css HTTP/1.0" 200 202176
+[17/Sep/2025 08:44:12] "GET /static/assets/fonts/tabler/tabler-icons.woff2 HTTP/1.0" 200 235232
+[17/Sep/2025 08:44:13] "GET /static/assets/images/favicon.svg HTTP/1.0" 200 1514
+[17/Sep/2025 08:45:41] "GET /?pdevice=a&pday=2025-09-15 HTTP/1.0" 200 156736
+[17/Sep/2025 08:50:47] "GET /list/?pymd=2025-09-15&pdepth1=product&pdevice=a HTTP/1.0" 200 39576
+Not Found: /favicon.ico
+[17/Sep/2025 08:50:47] "GET /favicon.ico HTTP/1.0" 404 2244
+[17/Sep/2025 08:50:54] "GET /list/?pymd=2025-09-15&pdepth1=home&pdevice=a HTTP/1.0" 200 4799
+[17/Sep/2025 08:51:01] "GET /list/?pymd=2025-09-15&pdepth1=brand&pdevice=a HTTP/1.0" 200 40358
+[17/Sep/2025 08:51:06] "GET /list/?pymd=2025-09-15&pdepth1=home&pdevice=a HTTP/1.0" 200 4799
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 17, 2025 - 09:02:34
+Django version 4.2.24, using settings 'alog_ga.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+[17/Sep/2025 09:02:40] "GET / HTTP/1.0" 200 148883
+[17/Sep/2025 09:02:42] "GET / HTTP/1.0" 200 148883
+[17/Sep/2025 09:02:43] "GET /static/assets/fonts/tabler-icons.min.css HTTP/1.0" 200 65599
+[17/Sep/2025 09:02:43] "GET /static/assets/fonts/feather.css HTTP/1.0" 200 14882
+[17/Sep/2025 09:02:43] "GET /static/assets/fonts/material.css HTTP/1.0" 200 561
+[17/Sep/2025 09:02:43] "GET /static/assets/fonts/fontawesome.css HTTP/1.0" 200 71978
+[17/Sep/2025 09:02:43] "GET /static/home.js HTTP/1.0" 200 2662
+[17/Sep/2025 09:02:43] "GET /static/assets/css/style-preset.css HTTP/1.0" 200 286199
+[17/Sep/2025 09:02:43] "GET /static/assets/js/plugins/popper.min.js HTTP/1.0" 200 20128
+[17/Sep/2025 09:02:43] "GET /static/assets/js/plugins/simplebar.min.js HTTP/1.0" 200 27067
+[17/Sep/2025 09:02:43] "GET /static/assets/js/plugins/bootstrap.min.js HTTP/1.0" 200 60583
+[17/Sep/2025 09:02:43] "GET /static/assets/css/style.css HTTP/1.0" 200 2073969
+[17/Sep/2025 09:02:43] "GET /static/assets/js/fonts/custom-font.js HTTP/1.0" 200 84427
+[17/Sep/2025 09:02:43] "GET /static/assets/js/pcoded.js HTTP/1.0" 200 23064
+[17/Sep/2025 09:02:43] "GET /static/assets/js/plugins/feather.min.js HTTP/1.0" 200 75977
+[17/Sep/2025 09:02:43] "GET /static/assets/fonts/phosphor/duotone/style.css HTTP/1.0" 200 202176
+[17/Sep/2025 09:02:43] "GET /static/assets/fonts/tabler/tabler-icons.woff2 HTTP/1.0" 200 235232
+[17/Sep/2025 09:02:43] "GET /static/assets/images/favicon.svg HTTP/1.0" 200 1514

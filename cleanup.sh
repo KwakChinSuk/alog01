@@ -5,6 +5,9 @@ shopt -s nullglob
 shopt -s nocaseglob
 
 export TZ=Asia/Seoul
+
+echo "$(date '+%Y-%m-%d %H:%M:%S %Z')"
+
 #TARGET_DIR="/home/ec2-user/alog/alog-bori/ga"
 
 TARGET_DIR="${1:-/home/ec2-user/alog/alog-bori/ga}"
@@ -59,4 +62,6 @@ find "$TARGET_DIR" -type f -name "*.csv" | while read -r file; do
 done
 
 echo "[DONE] 삭제:${deleted} 보존:${skipped} 오류:${errors}"
+
+echo "$(date '+%Y-%m-%d %H:%M:%S %Z')"
 

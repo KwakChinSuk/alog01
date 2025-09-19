@@ -1,11 +1,24 @@
-import sys
-import datetime
-import os
-import psycopg2
-import string
-import random
-import json
+import sys, datetime, os, string, random, json, psycopg2
 from decimal import Decimal
+
+KEY_PATH = "../../cskwak-152504-ff6974c3f80d.json"  # 키 파일명
+ppath = "../ga" 
+
+def dbconnp():
+    return psycopg2.connect("host=db01.c1i64gi0k41z.ap-northeast-2.rds.amazonaws.com dbname=postgres user=admin01 password=kjs202512 port=5432")
+
+
+dbschema = "alog_bori"         # DB   - (X) _ (O)
+mainpath = "../alog-bori/json" # AWS  - (O) _ (X)
+serviceurl = "https://alog-bori.jskwak.pe.kr"
+
+PROPERTY_ID = "349789872"   #  www.boribori.co.kr
+#PROPERTY_ID = "394311308"  #  halftest
+#PROPERTY_ID = "330117769"  #  www.jskwak.pe.kr
+
+
+dbcon = dbconnp()
+curp = dbcon.cursor()
 
 class DataUrlPara:    
     ymd: str = None    
@@ -16,27 +29,9 @@ class DataUrlPara:
     device: str = None  
     jsname: str = None  
 
-dbschema = "alog_bori"    # DB에서는 _  사용 불가
-mainpath = "../alog-bori/json" # AWS - (O)  _ (X)
-
-webport = "8000"
-PROPERTY_ID = "349789872"   #  www.boribori.co.kr
-#PROPERTY_ID = "330117769"  #  www.jskwak.pe.kr
-
-
-#folder ="D:/DevAlog/" + dbschema
-#folder ="/" + dbschema
-
-def dbconnp():
-    return psycopg2.connect("host=db01.c1i64gi0k41z.ap-northeast-2.rds.amazonaws.com dbname=postgres user=admin01 password=kjs202512 port=5432")
-
-dbcon = dbconnp()
-curp = dbcon.cursor()
-
 def fnsqlvalue(pvalue):
     pvalue = pvalue.replace("'","")
     return pvalue
-
 
 def fncreatecharid():
     return ''.join(random.sample(string.ascii_uppercase + string.digits, 6))
@@ -133,8 +128,6 @@ def fnSQLselect (strSQL) :
         print(strSQL)
         sys.exit()
 
-
-
 def fnSQLselect1 (strSQL) :
     try:        
         tconnp = dbconnp()
@@ -153,9 +146,10 @@ def fnSQLselect1 (strSQL) :
         print(strSQL)
         sys.exit()
 
+
+
 def fnSQLselectC (strSQL,UrlPara) :        
-    
-    ppath = mainpath + "/"+UrlPara.ymd
+    ppath = mainpath+ "/"+UrlPara.ymd
     pfilename = "/" +UrlPara.device+"_"+ UrlPara.jsname+".json"
 
     if (os.path.isfile(ppath+pfilename) ):
